@@ -90,7 +90,7 @@
         let size = 35;
         let box;    
         let game_score=0;
-        let h=0;
+        let h=3;
   
 
         let fruitArray = [
@@ -186,7 +186,6 @@
             score.innerText = game_score + "점";
         }
         function createHp() {
-
             for (let i = 0; i < 3; i++) {
                 let box = document.createElement("div");
                 box.style.width = size + "px";
@@ -199,7 +198,6 @@
                 hp.appendChild(box);
                 hpArray.push(box);
             }
-
         }
         function init() {
             wrapper = document.getElementById("wrapper");
@@ -236,7 +234,14 @@
                     } else {
 
                         alert("오답!");
-                        h++;
+                    
+                        if(h > 0){
+                            h--;
+                            if(h <= 0){
+                                alert("게임이 끝났습니다. 다시 시작을 하시려면 버튼을 눌러야 합니다.")
+                                location.reload();
+                            }
+                        } 
                         hpArray[h].style.background = "skyblue";
                     }
                     break;
@@ -255,8 +260,15 @@
                     } else {
 
                         alert("오답!");
-                        h++;
+                        if(h > 0){
+                            h--;
+                            if(h <= 0){
+                                alert("게임이 끝났습니다. 다시 시작을 하시려면 버튼을 눌러야 합니다.")
+                                location.reload();
+                            }
+                        } 
                         hpArray[h].style.background = "skyblue";
+                        console.log(h)
                     }
                     break;
                 }
@@ -272,8 +284,15 @@
                     } else {
 
                         alert("오답!");
-                        h++;
+                        if(h > 0){
+                            h--;
+                            if(h <= 0){
+                                alert("게임이 끝났습니다. 다시 시작을 하시려면 버튼을 눌러야 합니다.")
+                                location.reload();
+                            }
+                        } 
                         hpArray[h].style.background = "skyblue";
+                        console.log(h)
                     }
                     break;
                 }
@@ -289,7 +308,13 @@
                     } else {
 
                         alert("오답!");
-                        h++;
+                        if(h > 0){
+                            h--;
+                            if(h <= 0){
+                                alert("게임이 끝났습니다. 다시 시작을 하시려면 버튼을 눌러야 합니다.")
+                                location.reload();
+                            }
+                        } 
                         hpArray[h].style.background = "skyblue";
                     }
                     break;
@@ -306,13 +331,19 @@
                     } else {
 
                         alert("오답!");
-                        h++;
+                        if(h > 0){
+                            h--;
+                            if(h <= 0){
+                                alert("게임이 끝났습니다. 다시 시작을 하시려면 버튼을 눌러야 합니다.")
+                                location.reload();
+                            }
+                        } 
                         hpArray[h].style.background = "skyblue";
                     }
                     break;
                 }
             });
-
+            
         });
     </script>
 </head>
